@@ -11,9 +11,17 @@ span {
     background-clip: text;
 }
 
+#ordered-list {
+  list-style-type: armenian;
+}
+
 .dog-pic {
     width: 200px;
-    opacity: .5;
+    opacity: 1;
+}
+
+.dog-pic:hover {
+  opacity: .5;
 }
 
 .cat-pic {
@@ -21,11 +29,20 @@ span {
     width: 100px;
 }
 
-  @media only screen and (max-width: 1000px) {
-    body {
-      background-color: blue;
-    }
+@media only screen and (max-width: 1000px) {
+  body {
+    background-color: blue;
   }
+
+  #main {
+    background-color: orange;
+  }
+
+  .dog-pic {
+    height: 50px;
+    width: 50px;
+  }
+}
 
 @media only screen and (max-width: 600px) {
     body {
