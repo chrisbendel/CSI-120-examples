@@ -110,3 +110,143 @@ ken.favoriteGames.forEach(game => {
     game.multiplayer;
     game.platforms;
 });
+
+
+
+let yourVariableName = 'test';
+const myConstantyVariable = 'this cant change';
+
+myConstantyVariable = 'im changing this'; // not allowed
+yourVariableName = 'im changing this and its okay';
+
+let x = 5; 
+let y = '5';
+
+x == y; // true
+x === y; // false
+
+const dogs = ['Blart', 'Lola', 'Ben'];
+for (let i = 0; i < dogs.length; i++) {
+    console.log(i);
+}
+
+dogs.forEach(function(item) {
+    console.log(item);
+});
+
+let stringInterpolation = `${x} ${y}`;
+
+let colbysCar = {
+    make: 'Honda',
+    model: 'Civic',
+    year: 2006,
+    name: 'Bessie',
+    color: 'Silver',
+    datePurchased: new Date("6/1/2018"),
+    statesVisited: ['Vermont', 'New Hampshire', 'Massachussets']
+};
+
+colbysCar.statesVisited.forEach(function(state) {
+
+});
+
+for (let i = 0; i < colbysCar.statesVisited.length; i++) {
+    let state = colbysCar.statesVisited[i];
+    console.log(state);
+}
+
+colbysCar.statesVisited.forEach(state => console.log(state));
+
+let cookies = {
+    flour: '1 cup',
+};
+
+function cookies(flour, eggs, sugar, chocolate) {
+    
+    // bowl
+    // butter, sugars, egg, vanilla
+    let sugarMix = eggs + sugar;
+
+    // flour, oats, chocolate, baking soda
+    let dryMix = flour + chocolate;
+
+    // mix all together
+    let everything = dryMix + sugarMix;
+    // put in oven, some other function defined somewhere else
+    let bakedCookies = bakeInOven();
+    
+    // cookies!!
+    return bakedCookies;
+}
+
+let numberOfCookies = cookies('1 cup', '1', '1/2 cup', '1/2 cup');
+
+
+
+
+const myName = 'Chris';
+let yourName = 'Tak';
+
+let realNumber = 5;
+let stringNumber = '5';
+
+realNumber == stringNumber; // True
+realNumber === stringNumber; // False
+
+let dogs = ['Luna', 'Barron', 'Milo', 'Cabot', 'Kasey'];
+
+for (let i = 0; i < dogs.length; i++) {
+    let dog = dogs[i];
+    console.log(dog);
+}
+
+dogs.forEach((dog) => {
+    console.log(dog)
+});
+
+dogs.forEach(function(dog) {
+    console.log(dog);
+});
+
+const gabesCar = {
+    model: 'Legacy',
+    make: 'Subary',
+    year: 2001,
+    statesVisited: ['Delaware', 'Vermont', 'Massachussets'],
+    boughtInState: {
+        name: 'Montana',
+        county: 'Bumfuck'
+    }
+};
+
+for (let i = 0; i < gabesCar.statesVisited.length; i++) {
+    console.log(gabesCar.statesVisited[i]);
+}
+
+gabesCar.statesVisited.forEach(state => {
+    console.log(state);
+});
+
+gabesCar.statesVisited.forEach(function(state) {
+    console.log(state);
+});
+
+function squareNumber(numberToSquare) {
+    return numberToSquare * numberToSquare;
+}
+
+const coolSquareNumber = numberToSquare => numberToSquare * numberToSquare;
+
+let squared = squareNumber(5);
+let squared = coolSquareNumber(25);
+
+function sum(value1, value2) {
+    return value1 + value2;
+}
+
+const coolSum = (value1, value2) => {
+    return value1 + value2
+}
+
+const thirteen = sum(5, 8);
+
