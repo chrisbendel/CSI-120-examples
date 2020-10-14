@@ -27,6 +27,26 @@ window.onload = () => {
             alert("wrong password");
         }
     }
+
+
+    let tasks = [];
+    document.getElementById("addTask").onclick = () => {
+        let task = document.getElementById("task").value;
+        tasks.push(task);
+
+        let html = "";
+        tasks.forEach(task => {
+            html += `<h3 class="task">${task}</h3>`;
+        });
+
+        document.getElementById("tasks").innerHTML = html;
+        Array.from(document.getElementsByClassName("task")).forEach(task => {
+            task.onclick = (event) => {
+                event.target.remove();
+            }
+        })
+    }
+
 }
 
 
