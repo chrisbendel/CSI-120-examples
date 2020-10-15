@@ -16,7 +16,7 @@ window.onload = () => {
             computerContainer.appendChild(document.getElementById(computerMove).cloneNode(true));
 
             document.getElementById("options").style.display = 'none';
-            
+
             const winner = checkWinner(ourMove, computerMove);
 
             document.getElementById("playerOutcome").innerText = getPlayerText(winner);
@@ -55,7 +55,6 @@ const getComputerMove = () => {
 }
 
 const checkWinner = (playerMove, computerMove) => {
-    console.log("Player picked: ", playerMove, "Computer Picked: ", computerMove);
     if (playerMove === computerMove) {
         return 'tie';
     }
