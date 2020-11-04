@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Lab 8</title>
+	</head>
+	<body>
+		<h1>Cute Dog Generator</h1>
+		<button onclick="getRandomDogPicture()" type="button">
+			Get Random Dog Pic
+		</button>
+		<div id="random-dog"></div>
+		
+		<button onclick="getDogsByBreed()">Dog Breeds</button>
+		<hr>
+		<div id="pictures"></div>
+		<script>
+
+			fetch('https://dog.ceo/api/breed/hound/list')
+				.then(res => res.json())
+				.then(data => {
+					console.log(data);
+				});
+
+			console.log('outside');
+
+
+
+
+
+
+			fetch('https://dog.ceo/api/breeds/image/random')
+				.then(res => res.json())
+				.then(function(response) {
+					let message = response.message;
+				});
+
+			async function getRandomDogPicture() {
+				// https://dog.ceo/dog-api/documentation/random
+			}
+
+			async function getDogsByBreed() {
+				fetch('https://dog.ceo/api/breed/hound/list')
+				.then(res => res.json())
+				.then(data => {
+					data.message.forEach(breed => {
+						fetch(`https://dog.ceo/api/breed/hound/${breed}/images/random`)
+							.then(res => res.json())	
+							.then(breedImage => {
+									console.log(breedImage);
+							})
+					});
+				});
+				// https://dog.ceo/dog-api/documentation/sub-breed
+			}
+
+		</script>
+	</body>
+</html>
